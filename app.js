@@ -11,7 +11,7 @@
 */
 
 // server config
-var server_domain = 'rdmi'
+var server_domain = 'rylon.org'
 
 // imports
 var express = require('express'),
