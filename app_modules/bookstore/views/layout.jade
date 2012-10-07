@@ -36,7 +36,6 @@ html
               li
                 #cart.navbar-text
                   | Cart (
-                  =console.log(locals.cart);
                   if locals.cart.size == 1 
                     a(href="/cart") #{locals.cart.size} Item
                   else 

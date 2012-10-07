@@ -40,7 +40,7 @@ exports = module.exports = {
         var cart = new Cart();
         req.session.cart = cart.id;
         cart.save(function(err) {
-          next();
+          next(err);
         });
       } else { 
         next(); 
