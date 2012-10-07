@@ -314,13 +314,13 @@
 Javascript allows functions to be passed as parameters to other functions:
 ```javascript
 var paramfunc = function() {
-  #this happens second..
+  //this happens second..
 };
 
 var myfunc = function(callback) {
-  #this happens first..
+  //this happens first..
   callback()
-  #this happens last..
+  //this happens last..
 };
 
 myfunc(paramfunc);
@@ -330,25 +330,25 @@ Often we won't define our callback before hand, we'll instead create it as an an
 
 ```javascript
 var myfunc = function(callback) {
-  #this happens first..
+  //this happens first..
   callback()
-  #this happens last..
+  //this happens last..
 };
 
-myfunc(function() { #this happens second..  } );
+myfunc(function() { //this happens second..  } );
 ```
 
 We might also open up the anonymous callback function so that we can place code inside.
 
 ```javascript
 var myfunc = function(callback) {
-  #this happens first..
+  //this happens first..
   callback()
-  #this happens last..
+  //this happens last..
 };
 
 myfunc(function() { 
-    #this happens second..  
+    //this happens second..  
 });
 ```
 
@@ -356,13 +356,13 @@ This allows us to do asynchronous tasks safely as we can use these callbacks to 
 
 ```javascript
 var saveToDatabase = function(data, callback) {
-  #save our data, happens first..
+  //save our data, happens first..
   callback()
-  #this happens last..
+  //this happens last..
 };
 
 saveToDatabase(mydata, function() { 
-  #use our saved data, happens second..
+  //use our saved data, happens second..
 });
 ```
 
@@ -370,20 +370,20 @@ We also might pass an error back into our callback if something goes wrong:
 
 ```javascript
 var saveToDatabase = function(data, callback) {
-  #save our data, happens first..
+  //save our data, happens first..
   if (something_went_wrong) {
     callback(error);
   } else {
     callback(null);
   };
-  #this happens last..
+  //this happens last..
 };
 
 saveToDatabase(mydata, function(error) { 
   if (error) {
-    #deal with the error
+    //deal with the error
   } else {
-    #use our saved data, happens second..
+    //use our saved data, happens second..
   };
 });
 ```
