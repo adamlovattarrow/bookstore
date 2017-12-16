@@ -228,7 +228,7 @@
     - [express](http://expressjs.com/) `2.5.8`
     - [express-validator](https://github.com/ctavan/express-validator) `0.2.4`
     - [jade](http://jade-lang.com/) `0.27.2`
-    - [mocha](http://visionmedia.github.com/mocha/) `1.6.0`
+    - [mocha](http://mochajs.org/) `1.6.0`
     - [mongoose](http://mongoosejs.com/) `3.0.1`
     - [mongoose-validator](https://github.com/leepowellcouk/mongoose-validator) `0.1.3`
     - [should](https://github.com/visionmedia/should.js) `1.2.0`
